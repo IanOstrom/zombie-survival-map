@@ -1,0 +1,39 @@
+<!doctype html>
+    
+<html lang="en-US">
+
+    <head>
+        <style>
+            #zombie_map {
+                height: 100%;
+                width: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;  
+                background-color: grey;
+            }
+        </style>
+    </head>
+        
+        
+    <body>
+        <div id="zombie_map"></div>
+        
+        <script>
+            var zombie_map;
+            function initMap() {
+                zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
+                    zoom: 16,
+                    center: {lat: 24.580946, lng: 118.104544}
+                    });
+                
+            }
+        </script>
+        
+        <script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3aXSQppg2sB75yVb2UmzvN9e7poia-YA&callback=initMap">
+		</script>
+    </body>    
+    
+    
+</html>

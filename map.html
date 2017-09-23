@@ -1,4 +1,6 @@
-<html>
+<!doctype html>
+
+<html lang="en-US">
 	<head>
 		<title>Example Map of "Zombie Apocolypse Survival" for Students</title>
 		<style>
@@ -11,14 +13,19 @@
 	</head>
 	
 	<body>
-		<p>This website is an example map for students creating the <a href=https://projects.raspberrypi.org/en/projects/zombie-apocalypse-map>Zombie Apocolypse Survival Map Project</a> by the Raspberry Pi Foundation.</p>
+		<p>This website is an example map for students creating the
+			<a href=https://projects.raspberrypi.org/en/projects/zombie-apocalypse-map>
+			Zombie Apocolypse Survival Map Project</a> by the Raspberry Pi Foundation.
+		</p>
 		
 		<p>Watch this video for a fun intro to the idea.</p>
 		
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/QKm0xL7HXBc?rel=0" frameborder="0" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/QKm0xL7HXBc?rel=0"
+				frameborder="0" allowfullscreen>
+		</iframe>
 		
 		<p></p>
-		<p>Use this map to survive.</p>
+		<p>Make a survival map below.</p>
 		<p></p>
 		<div id="zombie_map"></div>
 		<p></p>
@@ -35,7 +42,7 @@
 		
 					zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
 						zoom: 16,
-						center: {lat: 24.5512, lng: -81.8006}
+						center: {lat: 24.580946, lng: 118.104544}
 					  });
 					
 					zombie_map.addListener('click', function(e) {
