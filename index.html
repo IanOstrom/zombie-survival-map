@@ -17,15 +17,25 @@
 		
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/QKm0xL7HXBc?rel=0" frameborder="0" allowfullscreen></iframe>
 		
+		<p></p>
+		<p>Use this map to survive.</p>
+		<p></p>
 		<div id="zombie_map"></div>
 		<p></p>
+		<form>
+			Select an emoji
+			<select id="icon_to_use">
+			  <option value="zombie.png">Zombie</option>
+			  <option value="food.png">Food</option>
+			</select>
+		</form>
 		<script>
 			var zombie_map;
 			function initMap() {
 		
 					zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
-						zoom: 10,
-						center: {lat: 52.206727, lng: 0.124450}
+						zoom: 16,
+						center: {lat: 24.5512, lng: -81.8006}
 					  });
 					
 					zombie_map.addListener('click', function(e) {
@@ -35,10 +45,13 @@
 			}
 			
 			function place_marker(location) {
+				var emoji = document.getElementById('icon_to_use').value;
 				var marker = new google.maps.Marker({
 					position: location,
-					map: zombie_map
+					map: zombie_map,
+					icon: emoji
 				  });
+				console.log(emoji + " at " + location.lat() + " " + location.lng());
             }
 		</script>
 		
